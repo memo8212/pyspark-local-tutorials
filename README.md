@@ -73,6 +73,13 @@ pytest -q                                   # unit tests
 make all                                    # data + all tutorials (if you have make)
 ```
 
+### What each step does (and why)
+
+Not sure why a step exists? [`docs/setup-explained.md`](docs/setup-explained.md)
+walks through **every** setup step and **every** setting in
+`common/session.py` — what it does and how it helps. Read it once if you want to
+understand the machine under the hood.
+
 ## Version compatibility
 
 `delta-spark` must match your PySpark major version, otherwise the Delta
@@ -104,6 +111,7 @@ spark = get_spark("tutorial-name")
 common/      session.py, data.py, paths.py, helpers.py
 tutorials/   01..18 runnable scripts
 tests/       pytest unit tests
+docs/        setup-explained.md (what each setup step does + why)
 data/        generated sample CSVs/JSON (git-ignored)
 output/      generated outputs, e.g. Delta tables (git-ignored)
 run_all.py   run every tutorial in order
