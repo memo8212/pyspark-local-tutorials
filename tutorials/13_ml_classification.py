@@ -84,7 +84,6 @@ def main() -> None:
     print(f"accuracy={acc:.3f}  precision={prec:.3f}  recall={rec:.3f}")
 
     section("Threshold tuning (PD scores)")
-    from pyspark.ml.functions import vector_to_array
     scored = preds.withColumn("score", vector_to_array("probability")[1])
     for t in (0.3, 0.5, 0.7):
         flagged = scored.filter(f"score >= {t}").count()

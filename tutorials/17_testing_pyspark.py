@@ -52,7 +52,6 @@ def main() -> None:
     print("inline assertions passed")
 
     section("Schema assertion (guard against regressions)")
-    from pyspark.sql.types import DateType, DoubleType
     dtypes = dict(result.dtypes)
     assert dtypes["order_date"] == "date"
     assert dtypes["line_total"] == "double"

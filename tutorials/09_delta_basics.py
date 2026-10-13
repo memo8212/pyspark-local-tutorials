@@ -13,7 +13,6 @@ from common.session import get_spark, stop_spark  # noqa: E402
 def main() -> None:
     banner("09 - Delta Lake Basics")
     spark = get_spark("09-delta-basics")
-    from pyspark.sql import functions as F
 
     table = "delta_demo"
 

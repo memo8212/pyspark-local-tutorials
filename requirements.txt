@@ -1,11 +1,10 @@
-# Local PySpark stack. IMPORTANT: delta-spark must match your PySpark major
-# version — see README ("Version compatibility").
-#
+# Local PySpark stack, pinned to the tested combination.
+# IMPORTANT: delta-spark must match your PySpark major version.
+#   PySpark 4.x    ->  delta-spark 4.x   (tested: 4.2.0 / 4.4.1)
 #   PySpark 3.5.x  ->  delta-spark 3.x
-#   PySpark 4.x    ->  delta-spark 4.x
-pyspark>=3.5
-delta-spark>=3.0
-pandas>=2.0
-numpy>=1.24
-pyarrow>=14
-pytest>=7.4
+pyspark==4.2.0
+delta-spark==4.4.1
+pandas==2.3.3
+numpy==2.5.3
+pyarrow==23.0.1
+pytest==9.1.1
