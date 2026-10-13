@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Local Spark / Delta / Hive metastore
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+
+# Generated tutorial output + sample data (regenerate with `python common/data.py`)
+output/
+data/*.csv
+data/*.json
+data/*.parquet
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
